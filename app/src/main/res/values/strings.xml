@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="selectedlanguage" translatable="false">English</string>
+    <string name="heading" translatable="false">Welcome To Tic-Tac-Toe</string>
+    <string name="button1" translatable="false">PLAY</string>
+    <string name="button2" translatable="false">EXIT</string>
+    <string name="Image1" translatable="false">main page</string>
+    <string name="heading2" translatable="false">LET\'S PLAY</string>
+    <string name="our_grid" translatable="false">Our Main Grid</string>
+    <string name="user_rights" translatable="false">All Rights Are Reserved</string>
+    <string name="sign_in_to_continue" translatable="false">Sign In to continue</string>
+    <string name="hello_there_welcome_back" translatable="false">Hello There Welcome Back</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="username" translatable="false">Username</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="forget_password" translatable="false">Forget Password?</string>
+    <string name="go" translatable="false">GO</string>
+    <string name="new_user_sign_up" translatable="false">New User? SIGN UP</string>
+    <string name="type" translatable="false">Go</string>
+    <string name="signup_logo" translatable="false">signup logo</string>
+    <string name="sign_welcome" translatable="false">Welcome</string>
+    <string name="signup_message" translatable="false">SignUp to start your new Journey</string>
+    <string name="signup_username" translatable="false">Username</string>
+    <string name="full_name" translatable="false">Full Name</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="phone_no" translatable="false">Phone No</string>
+    <string name="already" translatable="false">Already have an account? LogIn</string>
+    <string name="verify_phone_no" translatable="false">Verify Phone No</string>
+    <string name="select_your_language" translatable="false">Select your Language/अपनी भाषा चुने</string>
+    <string name="english" translatable="false">English</string>
+    <string name="hindi" translatable="false">Hindi</string>
+    <string name="phone_number" translatable="false">Phone Number</string>
+    <string name="profilefull_name">Full Name</string>
+    <string name="profilee_mail">E-mail</string>
+    <string name="profilephone_number">Phone Number</string>
+    <string name="profilepassword">Password</string>
+    <string name="update">Update</string>
+    <string name="loses">Loses</string>
+    <string name="wins">Wins</string>
+    <string name="enter_verification_code">Enter verification code if not automatically authenticated.</string>
+    <string name="verify">Verify</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="we_will_send_you">We will send you an one time OTP on this given mobile no.</string>
+    <string name="enter_phone_number_for_otp_verification">Enter Phone Number for OTP verification</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="verify_otp">Enter OTP</string>
+    <string name="please_enter_the_otp_sent_to_you">PLease Enter the OTP sent to you</string>
+    <string name="otp_verification">OTP Verification</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/akronim</item>
+        <item>@font/antic</item>
+        <item>@font/baloo</item>
+        <item>@font/bungee</item>
+        <item>@font/bungee_shade</item>
+        <item>@font/cardo_bold</item>
+        <item>@font/chonburi</item>
+        <item>@font/cormorant_sc_light</item>
+    </array>
+</resources>

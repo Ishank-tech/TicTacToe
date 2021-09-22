@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Language">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="597dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="110dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ttt" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/bungee"
+            android:gravity="center"
+            android:text="@string/select_your_language"
+            android:textAlignment="center"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/eng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:onClick="ChgEng"
+            android:padding="15dp"
+            android:text="@string/english" />
+
+        <Button
+            android:id="@+id/hin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:onClick="ChgHin"
+            android:padding="15dp"
+            android:text="@string/hindi" />
+
+    </LinearLayout>
+
+</RelativeLayout>
