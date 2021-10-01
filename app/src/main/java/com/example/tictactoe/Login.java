@@ -34,7 +34,6 @@ public class Login extends AppCompatActivity {
         logPhoneNo = findViewById(R.id.log_PhoneNo);
         logPassword = findViewById(R.id.log_password);
         loginBtn = (Button) findViewById(R.id.login_btn);
-        progressBar = (ProgressBar) findViewById(R.id.progress_bar2);
 
 
 
@@ -80,7 +79,6 @@ public class Login extends AppCompatActivity {
     }
 
     private void isUser() {
-        progressBar.setVisibility(View.VISIBLE);
 
         final String _PhoneNo = logPhoneNo.getEditText().getText().toString().trim();
         final String _Password = logPassword.getEditText().getText().toString().trim();
@@ -120,13 +118,11 @@ public class Login extends AppCompatActivity {
                         finish();
 
                     } else {
-                        progressBar.setVisibility(View.GONE);
                         //Toast.makeText(Login.this,"Password does not match!",Toast.LENGTH_SHORT).show();
                         logPassword.setError("Wrong Password");
                         logPassword.requestFocus();
                     }
                 } else {
-                    progressBar.setVisibility(View.GONE);
                     //Toast.makeText(Login.this,"No Such user exists!",Toast.LENGTH_SHORT).show();
                     logPhoneNo.setError("No such User exists");
                     logPhoneNo.requestFocus();
