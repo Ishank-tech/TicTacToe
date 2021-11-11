@@ -21,7 +21,7 @@ public class Login extends AppCompatActivity {
 
      TextInputLayout logPhoneNo, logPassword;
      ProgressBar progressBar;
-     Button loginBtn;
+     Button loginBtn,googleBtn;
 
 
     @Override
@@ -34,6 +34,7 @@ public class Login extends AppCompatActivity {
         logPhoneNo = findViewById(R.id.log_PhoneNo);
         logPassword = findViewById(R.id.log_password);
         loginBtn = (Button) findViewById(R.id.login_btn);
+        googleBtn = findViewById(R.id.googlebtn);
 
 
 
@@ -144,6 +145,12 @@ public class Login extends AppCompatActivity {
         startActivity(intent);
         finish();
 
+    }
+
+    public void google(View view){
+        Intent intent = new Intent(Login.this, GoogleAuthentication.class);
+        startActivity(intent);
+        finish();
     }
 
 }

@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -33,6 +35,15 @@ public class UserProfile extends AppCompatActivity {
         fullNameLabel = findViewById(R.id.full_name_field);
         usernameLabel = findViewById(R.id.username_field);
         showAllUserData();
+
+        GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
+        if(signInAccount != null){
+            fullname.getEditText().setText(signInAccount.getDisplayName());
+            email.getEditText().setText(signInAccount.getEmail());
+            fullNameLabel.setText(signInAccount.getDisplayName());
+            usernameLabel.setText(signInAccount.getGivenName());
+        }
+
     }
 
     private void showAllUserData() {
@@ -57,5 +68,11 @@ public class UserProfile extends AppCompatActivity {
         Intent intent = new Intent(UserProfile.this, MainActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    public void Logout(View view){
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(getApplicationContext(),Login.class);
+        startActivity(intent);
     }
 }

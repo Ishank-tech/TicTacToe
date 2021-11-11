@@ -78,14 +78,33 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/googlebtn"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_gravity="left"
+            android:layout_margin="5dp"
+            android:text="Google SignIn"
+            android:textSize="10sp"
+            android:layout_weight="2"
+            android:onClick="google"/>
+
         <Button
             android:layout_width="200dp"
-            android:layout_height="43dp"
+            android:layout_height="48dp"
             android:layout_gravity="right"
             android:layout_margin="5dp"
             android:background="#00000000"
             android:elevation="0dp"
-            android:text="@string/forget_password" />
+            android:text="forget password"
+            android:textColor="@color/purple_500" />
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/login_btn"
