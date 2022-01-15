@@ -4,11 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Pair;
 import android.view.View;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class SplashActivity extends AppCompatActivity {
+
+    SharedPreferences Language;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +39,25 @@ public class SplashActivity extends AppCompatActivity {
 
                 finally {
 
-                    Intent intent = new Intent(SplashActivity.this, Language.class);
+                    Language = getSharedPreferences("Language",MODE_PRIVATE);
+                    boolean isFirstTime = Language.getBoolean("firstTime",true);
+
+                    if(isFirstTime){
+                        SharedPreferences.Editor editor = Language.edit();
+                        editor.putBoolean("firstTime",false);
+                        editor.commit();
+                        Intent intent = new Intent(getApplicationContext(),Language.class);
+                        startActivity(intent);
+                        finish();
+                    }else{
+                        Intent intent = new Intent(SplashActivity.this , Login.class);
+                        startActivity(intent);
+                        finish();
+                    }
+
+                    /*Intent intent = new Intent(SplashActivity.this, Language.class);
                     startActivity(intent);
-                    finish();
-
-
-
+                    finish();*/
 
                 }
 

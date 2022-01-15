@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -23,13 +25,19 @@ public class Login extends AppCompatActivity {
      ProgressBar progressBar;
      Button loginBtn,googleBtn;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
+
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        if(mAuth.getCurrentUser() != null){
+            Intent intent = new Intent(Login.this , MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
         logPhoneNo = findViewById(R.id.log_PhoneNo);
         logPassword = findViewById(R.id.log_password);

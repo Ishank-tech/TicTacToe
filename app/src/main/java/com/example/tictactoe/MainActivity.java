@@ -72,6 +72,9 @@ public class MainActivity extends AppCompatActivity {
         System.exit(0);
     }
 
-
+    public void Profile(View view){
+        Intent intent = new Intent(MainActivity.this, UserProfile.class);
+        startActivity(intent);
+    }
 
 }
